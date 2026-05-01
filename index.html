@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,4 +104,68 @@ navigator.vibrate(0);
 </script>
 
 </body>
+=======
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emergency Alert System</title>
+<link rel="stylesheet" href="alert.css">
+</head>
+
+<body>
+
+<header>
+<h1>🚨 Emergency Alert System</h1>
+<p>Fast emergency notification system using HTML, CSS and JavaScript</p>
+</header>
+
+<section class="main-box">
+
+<div class="card">
+<h2>Send Alert</h2>
+<p>Press the button below to activate emergency alarm and popup alert.</p>
+<button id="trigger">Send Emergency Alert</button>
+</div>
+
+<div class="card">
+<h2>Project Features</h2>
+<ul>
+<li>Emergency popup notification</li>
+<li>Alarm sound alert</li>
+<li>Mobile vibration support</li>
+<li>Current date & time display</li>
+<li>Responsive design</li>
+<li>Easy stop alert system</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Current Status</h2>
+<p id="status">System Ready</p>
+<p id="datetime"></p>
+</div>
+
+</section>
+
+<div id="alertBox" class="hidden">
+<h2>🚨 EMERGENCY ALERT 🚨</h2>
+<p>Someone needs your attention immediately!</p>
+<p id="liveTime"></p>
+<button onclick="stopAlert()">Stop Alert</button>
+</div>
+
+<audio id="alarm" preload="auto">
+<source src="beep.mp3" type="audio/mpeg">
+</audio>
+ 
+<footer>
+<p>Mini Project - Emergency Alert System</p>
+</footer>
+
+<script src="alert.js"></script>
+</body>
+>>>>>>> d0cd471eff286a735106d13a6179aee3ea3aa2eb
 </html>
