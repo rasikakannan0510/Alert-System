@@ -1,18 +1,73 @@
+/* alert.css */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-font-family: Arial;
+font-family:Arial, sans-serif;
+background:#f2f2f2;
+color:#222;
 text-align:center;
-margin-top:100px;
-background-color:#f2f2f2;
+}
+
+header{
+background:#5b7cff;
+color:white;
+padding:30px 20px;
+}
+
+header h1{
+font-size:38px;
+margin-bottom:10px;
+}
+
+header p{
+font-size:18px;
+}
+
+.main-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+padding:30px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h2{
+margin-bottom:15px;
+color:#5b7cff;
+}
+
+.card p, .card li{
+font-size:17px;
+margin:8px 0;
+list-style:none;
 }
 
 button{
 padding:15px 25px;
 font-size:18px;
-background-color:rgb(166,180,226);
+background:#5b7cff;
 color:white;
 border:none;
-border-radius:5px;
+border-radius:8px;
 cursor:pointer;
+margin-top:15px;
+transition:0.3s;
+}
+
+button:hover{
+opacity:0.9;
+transform:scale(1.03);
 }
 
 #alertBox{
@@ -23,15 +78,36 @@ width:100%;
 height:100%;
 background:red;
 color:white;
-
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-
-font-size:30px;
+font-size:32px;
+z-index:999;
+animation:flash 0.8s infinite;
+padding:20px;
 }
 
 .hidden{
 display:none;
+}
+
+#alertBox button{
+background:white;
+color:red;
+font-weight:bold;
+margin-top:20px;
+}
+
+footer{
+background:#222;
+color:white;
+padding:15px;
+margin-top:20px;
+}
+
+@keyframes flash{
+0%{opacity:1;}
+50%{opacity:0.7;}
+100%{opacity:1;}
 }
